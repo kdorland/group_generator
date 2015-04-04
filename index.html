@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>kdo.dk - Group Generator</title>
+    <meta name="description" content="Projects and stuff">
+    <meta name="author" content="Kristian">
+
+    <!-- Font
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans|Dosis:400,800" rel="stylesheet" type="text/css" />
+
+    <!-- JavaScript 
+    -------------------------------------------------- -->
+
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/kristian.css">
+    
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+        <div class="twelve columns">
+            <ul id="nav">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="twelve columns">
+            <h1>Group Generator</h1>            
+            <button class="button-primary" type="button" onclick="generate()">Generate groups</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="option_box" class="twelve columns">
+            
+            <p>Options</p>
+            <div>
+                <label>Group settings</label>                
+                <input type="checkbox" name="no_one_man_groups_allowed"/>
+                <span class="label-body">No "one man" groups.</span><br/>
+
+                <label>Group prefix</label>
+                <input type="text" name="group_prefix" value="Group"/><br/>
+            
+                <label>Group size</label>
+                <input type="number" name="group_size" value="3"><br/>
+
+                <div style="vertical-align: middle;">
+                    <label>Blacklist (experimental)</label>
+                    <textarea placeholder="{
+  &quot;Person 1&quot;: [
+    &quot;Person 2&quot;, &quot;Person 3&quot;, &quot;Person 4&quot;, &quot;Person 5&quot;, &quot;Person 6&quot;, &quot;Person 7&quot;, &quot;Person 8&quot;
+  ],
+  &quot;Person 2&quot;: [&quot;Person 12&quot;]
+}" class="u-full-width" name="group_blacklist" style="height: 200px;"></textarea>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="six columns">
+            <h2>Names</h2>
+<textarea id="taInput" style="height: 400px; width: 100%;">Person 1
+Person 2
+Person 3
+Person 4
+Person 5
+Person 6
+Person 7
+Person 8
+Person 9</textarea>
+        </div>
+
+        <div class="six columns">
+            <h2>Groups</h2>
+<textarea id="taOutput" style="height: 400px; width: 100%;">
+</textarea>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
